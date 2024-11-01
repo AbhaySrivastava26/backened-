@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+<div class="container">
+    <h1> ARey errripuka  {{ name if name else 'Guest' }}! enduku login chesnau</h1>
+    {% if name %}
+        <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+    {% else %}
+        <a href="{{ url_for('login') }}" class="btn btn-primary">Login</a>
+        <a href="{{ url_for('signup') }}" class="btn btn-secondary">Sign Up</a>
+    {% endif %}
+</div>
+</body>
+</html>
